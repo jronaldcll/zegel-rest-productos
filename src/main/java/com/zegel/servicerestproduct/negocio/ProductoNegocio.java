@@ -11,7 +11,6 @@ import java.util.List;
 public class ProductoNegocio {
     @Autowired
     private ProductoRepositorio productoRepositorio;
-
     public Producto grabar(Producto producto) {
         return productoRepositorio.save(producto);
     }
