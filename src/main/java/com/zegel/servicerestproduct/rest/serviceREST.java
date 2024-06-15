@@ -48,6 +48,16 @@ public class serviceREST {
         return productoNegocio.borrarProducto(codigo);
     }
 
+    @GetMapping("/producto/mayorprecio")
+    public Producto obtenerProductoMayorPrecio(){
+        return productoNegocio.obtenerProductoMayorPrecio();
+    }
+
+
+    @GetMapping("/productos/preciomayorque")
+    public List<Producto> obtenerProductoConPrecioMayorQue(@RequestParam("precioMinimo") Double precioMinimo){
+        return productoNegocio.obtenerProductoConPrecioMayorQue(precioMinimo);
+    }
 
  // Ventas
 

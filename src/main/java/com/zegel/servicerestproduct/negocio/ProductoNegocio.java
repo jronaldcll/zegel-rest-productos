@@ -37,4 +37,12 @@ public class ProductoNegocio {
         }
         return producto;
     }
+
+    public Producto obtenerProductoMayorPrecio(){
+        return productoRepositorio.obtenerProductoMayorPrecio();
+    }
+
+    public List<Producto> obtenerProductoConPrecioMayorQue(Double precioMinimo){
+        return productoRepositorio.obtenerProductoConPrecioMayorQue(precioMinimo);
+    }
 }
